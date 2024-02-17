@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "quantity": {
+      "type": "integer",
+      "default": 0,
+      "required": true,
+      "min": 0
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "products"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Gọng",
+        "Kính mát",
+        "Tròng"
+      ],
+      "required": true
+    },
+    "colors": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product.color"
+    },
+    "attributes": {
+      "type": "dynamiczone",
+      "components": [
+        "product.attributes",
+        "product.color"
+      ]
+    }
+  }
+}

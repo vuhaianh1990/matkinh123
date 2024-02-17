@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_product_attributes",
+  "info": {
+    "displayName": "attributes",
+    "icon": "stack",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "date": {
+      "type": "date"
+    }
+  }
+}
