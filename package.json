@@ -1,24 +1,36 @@
 {
-  "name": "@matkinh123/source",
+  "name": "@anhvh/matkinh123",
   "version": "0.0.0",
-  "license": "MIT",
-  "scripts": {
-    "prepare": "husky"
-  },
   "private": true,
+  "license": "MIT",
+  "type": "module",
   "workspaces": [
     "apps/*",
     "libs/*",
     "packages/*"
   ],
+  "scripts": {
+    "postinstall": "husky install",
+    "prepare": "husky",
+    "prettier": "prettier --write"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,json}": [
+      "npm run prettier"
+    ]
+  },
   "devDependencies": {
-    "@nx/js": "18.0.6",
-    "@nx/workspace": "18.0.6",
+    "@commitlint/cli": "^19.0.3",
+    "@commitlint/config-conventional": "^19.0.3",
+    "@nx/js": "18.0.8",
+    "@nx/workspace": "18.0.8",
     "@swc-node/register": "1.8.0",
     "@swc/core": "~1.3.85",
     "husky": "^9.0.11",
-    "nx": "18.0.6",
+    "lint-staged": "^15.2.2",
+    "nx": "18.0.8",
     "prettier": "^2.6.2",
-    "typescript": "5.3.3"
+    "typescript": "5.3.3",
+    "validate-branch-name": "^1.3.0"
   }
 }
