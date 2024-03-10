@@ -4,7 +4,7 @@
   "info": {
     "singularName": "product",
     "pluralName": "products",
-    "displayName": "Product",
+    "displayName": "Sản Phẩm",
     "description": ""
   },
   "options": {
@@ -29,12 +29,7 @@
       "type": "media",
       "multiple": true,
       "required": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "allowedTypes": ["images", "files", "videos", "audios"]
     },
     "categories": {
       "type": "relation",
@@ -44,11 +39,7 @@
     },
     "type": {
       "type": "enumeration",
-      "enum": [
-        "Gọng",
-        "Kính mát",
-        "Tròng"
-      ],
+      "enum": ["Gọng", "Kính mát", "Tròng"],
       "required": true
     },
     "colors": {
@@ -58,10 +49,7 @@
     },
     "attributes": {
       "type": "dynamiczone",
-      "components": [
-        "product.attributes",
-        "product.color"
-      ]
+      "components": ["product.attributes", "product.color"]
     }
   }
 }

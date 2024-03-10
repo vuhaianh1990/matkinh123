@@ -12,4 +12,8 @@ module.exports = {
       },
     },
   },
+  suneditor: {
+    enabled: true,
+    resolve: './src/plugins/suneditor',
+  },
 };

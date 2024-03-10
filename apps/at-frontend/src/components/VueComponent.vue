@@ -13,6 +13,7 @@ export default {
   methods: {
     increment() {
       this.count++;
+      console.log(`Vue: The initial count is ${this.count}.`);
     },
   },
 
@@ -20,11 +21,11 @@ export default {
   // of a component's lifecycle.
   // This function will be called when the component is mounted.
   mounted() {
-    console.log(`The initial count is ${this.count}.`);
+    console.log(`Vue: The initial count is ${this.count}.`);
   },
 };
 </script>
 
 <template>
-  Vue Component: <button @click="increment">Count is: {{ count }}</button>
+  Vue Component: <button @click="increment">Count is: {{ count }} times</button>
 </template>

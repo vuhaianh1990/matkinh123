@@ -1,18 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import PageComponent from '../components/PageComponent';
+import ReactComponent from '../components/ReactComponent';
 import SvelteComponent from '../components/SvelteComponent.svelte';
-import CountVue from '../components/Count.vue';
+import VueComponent from '../components/VueComponent.vue';
 ---
 
 <Layout title="Welcome to demo">
   <main style="color: #fff;">
-    <h1>hello everyone,</h1>
-    <p>It's demo page</p>
-    <PageComponent>
-      React Components
-    </PageComponent>
-    <SvelteComponent />
-    <CountVue client:visible />
+    <h1>It's demo page</h1>
+    <ReactComponent client:load>
+      <span>React Components</span>
+    </ReactComponent>
+    <SvelteComponent client:load />
+    <VueComponent client:load />
   </main>
 </Layout>
